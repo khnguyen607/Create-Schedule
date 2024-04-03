@@ -1,0 +1,6 @@
+com\cursion\schedule\resources\JakartaEE10Resource.class
+test\run$NormalizedCourse.class
+test\run.class
+com\cursion\schedule\JakartaRestConfiguration.class
+test\run$Course.class
+test\NewServlet.class

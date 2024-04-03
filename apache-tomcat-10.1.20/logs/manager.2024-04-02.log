@@ -1,0 +1,7 @@
+02-Apr-2024 22:58:13.460 INFO [http-nio-8080-exec-4] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+02-Apr-2024 22:58:13.460 INFO [http-nio-8080-exec-4] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+02-Apr-2024 22:58:13.491 INFO [http-nio-8080-exec-7] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+02-Apr-2024 22:58:13.494 INFO [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+02-Apr-2024 22:58:13.501 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/first'
+02-Apr-2024 22:58:14.032 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Bin/AppData/Local/Temp/context11351812080024966722.xml'
+02-Apr-2024 22:58:14.174 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/first'

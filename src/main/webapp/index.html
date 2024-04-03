@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Create schedule</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/cover.css" rel="stylesheet">
+    <link href="assets/css/dropfile.css" rel="stylesheet">
+    <link href="assets/css/tabletime.css" rel="stylesheet">
+</head>
+
+
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">Group 1</h3>
+            </div>
+        </header>
+
+
+
+        <main class="px-3">
+            <section>
+                <h1>Find your best schedule.</h1>
+                <p class="lead">
+                    Say goodbye to scheduling stress and hello to seamless time management. Experience the
+                    difference today.
+                </p>
+                <p class="lead">
+                    <!-- <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a> -->
+                </p>
+                <div class="drag-image w-100">
+                    <div class="icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h6>Drag & Drop File Here (.xlsx)</h6>
+                    <span>OR</span>
+                    <button>Browse File</button>
+                    <input type="file" hidden>
+                </div>
+            </section>
+
+            <section class="tableTime mt-5 d-none">
+
+                <div class="form-filter container my-2 bg-light" style="color: black;">
+                    <div class="p-2">
+                        <div class="row">
+                            <div class="col">
+                                <label for="maxCourses">Max courses per week:</label>
+                                <input type="number" class="form-control" id="maxCourses" name="maxCourses" value="5">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <label for="courses">Interested course:</label>
+                            <div class="col">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Math" id="mathCheckbox">
+                                    <label class="form-check-label" for="mathCheckbox">Toán</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Physics"
+                                        id="physicsCheckbox">
+                                    <label class="form-check-label" for="physicsCheckbox">Vật lý</label>
+                                </div>
+                                <!-- Thêm các checkbox khác tương tự cho các môn học khác -->
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <button class="btn btn-primary" onclick="filterSchedule()">Fillter</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container bg-light overflow-auto" style="height: 500px;">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Total: 92 schedule</th>
+                                <th scope="col">Course per Week</th>
+                            </tr>
+                        </thead>
+                        <tbody class="dataBody">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true" style="width: 100%; color: black;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Lịch học</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="timetable" style="max-width: 100%; max-height: 100%;">
+                                    <div class="week-names">
+                                        <div>Thứ 2</div>
+                                        <div>Thứ 3</div>
+                                        <div>Thứ 4</div>
+                                        <div>Thứ 5</div>
+                                        <div>Thứ 6</div>
+                                        <div>Thứ 7</div>
+                                    </div>
+                                    <div class="time-interval">
+                                        <div>06:30 - 09:10</div>
+                                        <div>09:20 - 12:00</div>
+                                        <div>12:30 - 15:10</div>
+                                        <div>15:20 - 18:00</div>
+                                    </div>
+                                    <div class="content">
+                                        <!-- Shift-1 -->
+                                        <div class="shift shift-1">
+                                            <div class="accent-orange-gradient">
+                                                Chủ nghĩa xã hội
+                                            </div>
+                                        </div>
+                                        <div class="shift shift-5"></div>
+                                        <div class="shift shift-9"></div>
+                                        <div class="shift shift-13"></div>
+                                        <div class="shift shift-17">
+                                            <div class="accent-green-gradient"></div>
+                                        </div>
+                                        <div class="shift shift-21"></div>
+
+                                        <!-- Shift-2 -->
+                                        <div class="shift shift-2"></div>
+                                        <div class="shift shift-6"></div>
+                                        <div class="shift shift-10"></div>
+                                        <div class="shift shift-14">
+                                            <div class="accent-cyan-gradient">
+                                                Chủ nghĩa xã hội hải phòng việt nam
+                                            </div>
+                                        </div>
+                                        <div class="shift shift-18"></div>
+                                        <div class="shift shift-22"></div>
+
+                                        <!-- Shift-3 -->
+                                        <div class="shift shift-3">
+                                            <div class="accent-pink-gradient"></div>
+                                        </div>
+                                        <div class="shift shift-7"></div>
+                                        <div class="shift shift-11">
+                                            <div class="accent-purple-gradient"></div>
+                                        </div>
+                                        <div class="shift shift-15"></div>
+                                        <div class="shift shift-19"></div>
+                                        <div class="shift shift-23"></div>
+
+                                        <!-- Shift-4 -->
+                                        <div class="shift shift-4"></div>
+                                        <div class="shift shift-8"></div>
+                                        <div class="shift shift-12"></div>
+                                        <div class="shift shift-16"></div>
+                                        <div class="shift shift-20"></div>
+                                        <div class="shift shift-24"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+        <footer class="mt-auto text-white-50">
+            <p>
+                Powered by
+                <a href="https://www.facebook.com/khnguyen.607" class="text-white">
+                    Khôi Nguyên
+                </a>
+                .
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+<script src="assets/js/cover.js"></script>
+<script src="assets/js/jszip.js"></script>
+<script src="assets/js/xlsx.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
